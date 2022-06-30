@@ -1,0 +1,157 @@
+.sidebar .nav .nav-item.active{
+	background: transparent !important;
+}
+
+.sidebar .nav .nav-item:hover{
+	background: transparent !important;
+}
+
+.nav-label{
+	padding: 0.8125rem 1.937rem 0.8125rem 1rem;
+	color: #003566;
+	font-weight: bold;
+}
+
+.nav-title{
+	padding: 0.8125rem 1.937rem 0.8125rem 1rem;
+}
+
+.menu-icon-custom{
+	width: 24px;
+	display: flex;
+	align-items: center;
+}
+
+.nav-dash{
+	width: 100%;
+	height: 1px;
+	background: #E5E5E5;
+	margin: 15px 0px;
+}
+
+.navbar{
+	box-shadow: none !important;
+}
+
+.nav-title h4{
+	font-weight: bold;
+	color: #003566;
+}
+
+.nav-title span{
+	color: #8E8E8E;
+}
+
+.navbar-nav .nav-search input{
+	background: #FAFBFC !important;
+	padding: 0 10px !important;
+	width: 400px;
+}
+
+.navbar-nav .input-group-prepend{
+	background-color: #6D7DB6;
+	padding: 0 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.btn-outline-danger-custom{
+	color: red;
+}
+
+.btn-outline-danger-custom:hover{
+	border: 1px solid red !important;
+	color: red;
+}
+
+.custom-form-control{
+	border: none !important;
+	background-color: #F4F7FE;
+	border-radius: 10px;
+}
+
+.text-primary{
+	color: #003566 !important;
+}
+
+.img-brand-container{
+	border-radius: 100%;
+	border: 1px solid #C4C4C4;
+}
+
+.img-brand-container img{
+	border-radius: 100%;
+}
+
+.text-yellow{
+	color: #F59D31;
+}
+
+.card-ellipsis a i{
+	font-size: 25px;
+	color: #C4C4C4;
+}
+
+.brand.dropdown-menu{
+	background-color: #003566;
+	border: none;
+	border-radius: 0px !important;
+}
+.brand.dropdown-menu .dropdown-item{
+	color: #fff;
+}
+
+.brand.dropdown-menu .dropdown-item:hover{
+	color: #003566 !important;
+}
+
+.text-tfablue{
+	color: #6D7DB6;
+}
+
+.nav-item.active svg.active{
+	display: block;
+}
+
+.nav-item svg.active{
+	display: none;
+}
+
+
+.nav-item.active svg.non-active{
+	display: none;
+}
+.nav-item svg.non-active{
+	display: block;
+}
+
+.input-group-custom .input-group-prepend .input-group-text{
+	background-color: #F4F7FE !important;
+	border: none;
+}
+
+.text-underline{
+	text-decoration: underline;
+}
+
+a.text-yellow:hover{
+	color: #F59D31;
+}
+
+.border-0{
+	border: none !important;
+}
+
+.form-check .form-check-label{
+	color: #a3a4a5 !important;
+}
+.form-check .form-check-label input[type=checkbox]{
+	display: none;
+}
+
+.border-1{
+	border: 1px solid #8F9BBA;
+	padding: 6px;
+	border-radius: 13px;
+	margin-right: 5px;
+}

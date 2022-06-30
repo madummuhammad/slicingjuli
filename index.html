@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Franchisor</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <!-- endinject -->
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+      <!--   <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.svg" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a> -->
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search by anything" aria-label="search" aria-describedby="search">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search text-white"></i>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator"href="#">
+              <i>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="10" fill="#C4C4C4"/>
+                  <path d="M8.79695 11.1433C8.79695 10.6179 9.19797 10.0122 10 9.32602C10.3553 9.01511 10.5939 8.77388 10.7157 8.60234C10.8376 8.42008 10.8985 8.21101 10.8985 7.97515C10.8985 7.68567 10.8071 7.44981 10.6244 7.26754C10.4416 7.08528 10.2132 6.99415 9.93909 6.99415C9.38071 6.99415 8.95939 7.40156 8.67513 8.21637L7 7.44444C7.2132 6.65107 7.57868 6.04532 8.09645 5.62719C8.62437 5.20906 9.25888 5 10 5C10.8528 5 11.5635 5.26267 12.132 5.78801C12.7107 6.31335 13 6.98879 13 7.81433C13 8.2539 12.9036 8.65059 12.7107 9.00439C12.5178 9.35819 12.1929 9.74415 11.736 10.1623C11.2792 10.5804 10.9848 10.8699 10.8528 11.0307C10.731 11.1915 10.6701 11.3738 10.6701 11.5775C10.6701 11.6311 10.6802 11.7437 10.7005 11.9152H8.96447C8.85279 11.6472 8.79695 11.3899 8.79695 11.1433ZM8.46193 14.5044C8.46193 14.0863 8.59898 13.7325 8.8731 13.443C9.14721 13.1535 9.48731 13.0088 9.8934 13.0088C10.2995 13.0088 10.6345 13.1535 10.8985 13.443C11.1726 13.7325 11.3096 14.0863 11.3096 14.5044C11.3096 14.9332 11.1726 15.2924 10.8985 15.5819C10.6345 15.8606 10.2995 16 9.8934 16C9.48731 16 9.14721 15.8606 8.8731 15.5819C8.59898 15.2924 8.46193 14.9332 8.46193 14.5044Z" fill="white"/>
+                </svg>
+
+              </i>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count">3</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifikasi</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Notifikasi Satu</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Baru saja
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/profile.svg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Team review meeting at 3.00 PM
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepare for presentation
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolve all the low priority tickets due today
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Schedule meeting for next week
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Project review
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 11 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">The total number of sessions</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+            </div>
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Thomas Douglas</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Catherine</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Daniel Russell</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <p>James Richardson</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Madeline Kennedy</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Sarah Graves</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-title">
+            <h4>John Doe</h4>
+            <span>Franchisor</span>
+          </li>
+          <li class="nav-dash"></li>
+          <li class="nav-label">
+            Menu
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center" href="index.html">
+              <i class="menu-icon-custom">
+                <svg class="active" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.556 3.71614H11.3V2.94817C11.3 1.58811 10.196 0.500171 8.85199 0.500171H7.36405C6.00399 0.484211 4.89999 1.58811 4.89999 2.9322V3.70017H2.64397C1.45994 3.70017 0.5 4.66022 0.5 5.84414V7.71614C1.20403 7.92417 2.16394 8.14816 3.444 8.32416V8.27617C3.444 7.54012 4.03597 6.94817 4.77199 6.94817H5.52399C6.26005 6.94817 6.85199 7.54014 6.85199 8.27617V8.56412C7.25199 8.58008 7.66796 8.58008 8.09999 8.58008C8.53202 8.58008 8.94799 8.58008 9.33202 8.56412V8.27617C9.33202 7.54012 9.92399 6.94817 10.66 6.94817H11.412C12.1481 6.94817 12.74 7.54014 12.74 8.27617L12.7399 8.34012C14.0199 8.18008 14.9798 7.9561 15.6839 7.7321L15.684 5.86021C15.7 4.66021 14.7399 3.71613 13.556 3.71613V3.71614ZM6.74002 3.71614V2.94817C6.74002 2.61211 7.01201 2.34014 7.34805 2.34014H8.83599C9.17205 2.34014 9.44402 2.61213 9.44402 2.94817V3.71614H6.74002Z" fill="#003566"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7561 9.89218C12.7561 10.6282 12.1642 11.2202 11.4281 11.2202H10.6761C9.94007 11.2202 9.34813 10.6282 9.34813 9.89218V9.5722C8.94813 9.58816 8.53216 9.58816 8.1161 9.58816C7.68408 9.58816 7.26811 9.58816 6.86811 9.5722V9.89218C6.86811 10.6282 6.27613 11.2202 5.54011 11.2202H4.78811C4.05205 11.2202 3.46011 10.6282 3.46011 9.89218V9.33212C2.22808 9.17207 1.26814 8.98012 0.516113 8.77206V12.7881C0.516113 13.9721 1.47617 14.932 2.66008 14.932H13.5721C14.7561 14.932 15.716 13.972 15.716 12.7881V8.75635C14.964 8.96438 14.004 9.17232 12.772 9.3164V9.89229L12.7561 9.89218Z" fill="#003566"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.52391 10.2442C5.71588 10.2442 5.87591 10.0842 5.87591 9.89221V8.29219C5.87591 8.10022 5.71586 7.94019 5.52391 7.94019H4.77192C4.57995 7.94019 4.41992 8.10023 4.41992 8.29219V9.89221C4.41992 10.0842 4.57997 10.2442 4.77192 10.2442H5.52391Z" fill="#003566"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.428 10.2442C11.6199 10.2442 11.78 10.0842 11.78 9.89221V8.29219C11.78 8.10022 11.6199 7.94019 11.428 7.94019H10.676C10.484 7.94019 10.324 8.10023 10.324 8.29219V9.89221C10.324 10.0842 10.484 10.2442 10.676 10.2442H11.428Z" fill="#003566"/>
+                </svg>
+                <svg class="non-active" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.556 3.71614H11.3V2.94817C11.3 1.58811 10.196 0.500171 8.85199 0.500171H7.36405C6.00399 0.484211 4.89999 1.58811 4.89999 2.9322V3.70017H2.64397C1.45994 3.70017 0.5 4.66022 0.5 5.84414V7.71614C1.20403 7.92417 2.16394 8.14816 3.444 8.32416V8.27617C3.444 7.54012 4.03597 6.94817 4.77199 6.94817H5.52399C6.26005 6.94817 6.85199 7.54014 6.85199 8.27617V8.56412C7.25199 8.58008 7.66796 8.58008 8.09999 8.58008C8.53202 8.58008 8.94799 8.58008 9.33202 8.56412V8.27617C9.33202 7.54012 9.92399 6.94817 10.66 6.94817H11.412C12.1481 6.94817 12.74 7.54014 12.74 8.27617L12.7399 8.34012C14.0199 8.18008 14.9798 7.9561 15.6839 7.7321L15.684 5.86021C15.7 4.66021 14.7399 3.71613 13.556 3.71613V3.71614ZM6.74002 3.71614V2.94817C6.74002 2.61211 7.01201 2.34014 7.34805 2.34014H8.83599C9.17205 2.34014 9.44402 2.61213 9.44402 2.94817V3.71614H6.74002Z" fill="#8E8E8E"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7561 9.89218C12.7561 10.6282 12.1642 11.2202 11.4281 11.2202H10.6761C9.94007 11.2202 9.34813 10.6282 9.34813 9.89218V9.5722C8.94813 9.58816 8.53216 9.58816 8.1161 9.58816C7.68408 9.58816 7.26811 9.58816 6.86811 9.5722V9.89218C6.86811 10.6282 6.27613 11.2202 5.54011 11.2202H4.78811C4.05205 11.2202 3.46011 10.6282 3.46011 9.89218V9.33212C2.22808 9.17207 1.26814 8.98012 0.516113 8.77206V12.7881C0.516113 13.9721 1.47617 14.932 2.66008 14.932H13.5721C14.7561 14.932 15.716 13.972 15.716 12.7881V8.75635C14.964 8.96438 14.004 9.17232 12.772 9.3164V9.89229L12.7561 9.89218Z" fill="#8E8E8E"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.52391 10.2442C5.71588 10.2442 5.87591 10.0842 5.87591 9.89221V8.29219C5.87591 8.10022 5.71586 7.94019 5.52391 7.94019H4.77192C4.57995 7.94019 4.41992 8.10023 4.41992 8.29219V9.89221C4.41992 10.0842 4.57997 10.2442 4.77192 10.2442H5.52391Z" fill="#8E8E8E"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.428 10.2442C11.6199 10.2442 11.78 10.0842 11.78 9.89221V8.29219C11.78 8.10022 11.6199 7.94019 11.428 7.94019H10.676C10.484 7.94019 10.324 8.10023 10.324 8.29219V9.89221C10.324 10.0842 10.484 10.2442 10.676 10.2442H11.428Z" fill="#8E8E8E"/>
+                </svg>
+
+              </i>
+              <span class="menu-title">Account Information</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="brand.html">
+              <i class="menu-icon-custom">
+                <svg class="active" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.49998 2.00004H13.3333C13.7916 2.00004 14.1666 1.62504 14.1666 1.16671C14.1666 0.708374 13.7916 0.333374 13.3333 0.333374H2.49998C2.04165 0.333374 1.66665 0.708374 1.66665 1.16671C1.66665 1.62504 2.04165 2.00004 2.49998 2.00004ZM12.5 11.1667H14.1666V8.66671H14.3166C14.8416 8.66671 15.2333 8.18337 15.1333 7.66671L14.3 3.50004C14.225 3.11671 13.8833 2.83337 13.4833 2.83337H2.34998C1.94998 2.83337 1.60831 3.11671 1.53331 3.50004L0.69998 7.66671C0.59998 8.18337 0.991647 8.66671 1.51665 8.66671H1.66665V12.8334C1.66665 13.2917 2.04165 13.6667 2.49998 13.6667H8.33331C8.79165 13.6667 9.16665 13.2917 9.16665 12.8334V8.66671H12.5V11.1667ZM7.49998 12H3.33331V8.66671H7.49998V12Z" fill="#003566"/>
+                  <path d="M18.3333 12H16.6667V10.3333C16.6667 9.875 16.2917 9.5 15.8333 9.5C15.375 9.5 15 9.875 15 10.3333V12H13.3333C12.875 12 12.5 12.375 12.5 12.8333C12.5 13.2917 12.875 13.6667 13.3333 13.6667H15V15.3333C15 15.7917 15.375 16.1667 15.8333 16.1667C16.2917 16.1667 16.6667 15.7917 16.6667 15.3333V13.6667H18.3333C18.7917 13.6667 19.1667 13.2917 19.1667 12.8333C19.1667 12.375 18.7917 12 18.3333 12Z" fill="#003566"/>
+                </svg>
+                <svg class="non-active" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.49998 2.00004H13.3333C13.7916 2.00004 14.1666 1.62504 14.1666 1.16671C14.1666 0.708374 13.7916 0.333374 13.3333 0.333374H2.49998C2.04165 0.333374 1.66665 0.708374 1.66665 1.16671C1.66665 1.62504 2.04165 2.00004 2.49998 2.00004ZM12.5 11.1667H14.1666V8.66671H14.3166C14.8416 8.66671 15.2333 8.18337 15.1333 7.66671L14.3 3.50004C14.225 3.11671 13.8833 2.83337 13.4833 2.83337H2.34998C1.94998 2.83337 1.60831 3.11671 1.53331 3.50004L0.69998 7.66671C0.59998 8.18337 0.991647 8.66671 1.51665 8.66671H1.66665V12.8334C1.66665 13.2917 2.04165 13.6667 2.49998 13.6667H8.33331C8.79165 13.6667 9.16665 13.2917 9.16665 12.8334V8.66671H12.5V11.1667ZM7.49998 12H3.33331V8.66671H7.49998V12Z" fill="#777777"/>
+                  <path d="M18.3333 12H16.6667V10.3333C16.6667 9.875 16.2917 9.5 15.8333 9.5C15.375 9.5 15 9.875 15 10.3333V12H13.3333C12.875 12 12.5 12.375 12.5 12.8333C12.5 13.2917 12.875 13.6667 13.3333 13.6667H15V15.3333C15 15.7917 15.375 16.1667 15.8333 16.1667C16.2917 16.1667 16.6667 15.7917 16.6667 15.3333V13.6667H18.3333C18.7917 13.6667 19.1667 13.2917 19.1667 12.8333C19.1667 12.375 18.7917 12 18.3333 12Z" fill="#777777"/>
+                </svg>
+
+              </i>
+              <span class="menu-title">My Brand</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="menu-icon-custom">
+                <svg class="active" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.4352 0.629593H4.56489C2.39266 0.629593 0.629707 2.38469 0.629707 4.54904V9.25552V10.0426C0.629707 12.2069 2.39266 13.962 4.56489 13.962H5.74544C5.95794 13.962 6.24129 14.1037 6.37508 14.2768L7.55563 15.8431C8.07508 16.5356 8.92508 16.5356 9.44454 15.8431L10.6251 14.2768C10.7746 14.0801 11.0107 13.962 11.2547 13.962H12.4352C14.6074 13.962 16.3704 12.2069 16.3704 10.0426V4.54904C16.3704 2.38469 14.6074 0.629593 12.4352 0.629593ZM9.28712 9.87728H4.56489C4.24221 9.87728 3.97461 9.60972 3.97461 9.287C3.97461 8.96432 4.24221 8.69672 4.56489 8.69672H9.28712C9.60982 8.69672 9.87738 8.96432 9.87738 9.287C9.87738 9.60972 9.60982 9.87728 9.28712 9.87728ZM12.4352 5.9421H4.56489C4.24221 5.9421 3.97461 5.6745 3.97461 5.35182C3.97461 5.02913 4.24221 4.76154 4.56489 4.76154H12.4352C12.7579 4.76154 13.0255 5.02913 13.0255 5.35182C13.0255 5.6745 12.7579 5.9421 12.4352 5.9421Z" fill="#003566"/>
+                </svg>
+                <svg class="non-active" width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.1667 0.666626H4.83341C2.53341 0.666626 0.666748 2.52496 0.666748 4.81663V9.79996V10.6333C0.666748 12.925 2.53341 14.7833 4.83341 14.7833H6.08341C6.30841 14.7833 6.60842 14.9333 6.75008 15.1166L8.00008 16.775C8.55008 17.5083 9.45008 17.5083 10.0001 16.775L11.2501 15.1166C11.4084 14.9083 11.6584 14.7833 11.9167 14.7833H13.1667C15.4667 14.7833 17.3334 12.925 17.3334 10.6333V4.81663C17.3334 2.52496 15.4667 0.666626 13.1667 0.666626ZM9.83342 10.4583H4.83341C4.49175 10.4583 4.20841 10.175 4.20841 9.83329C4.20841 9.49163 4.49175 9.20829 4.83341 9.20829H9.83342C10.1751 9.20829 10.4584 9.49163 10.4584 9.83329C10.4584 10.175 10.1751 10.4583 9.83342 10.4583ZM13.1667 6.29163H4.83341C4.49175 6.29163 4.20841 6.00829 4.20841 5.66663C4.20841 5.32496 4.49175 5.04163 4.83341 5.04163H13.1667C13.5084 5.04163 13.7917 5.32496 13.7917 5.66663C13.7917 6.00829 13.5084 6.29163 13.1667 6.29163Z" fill="#8E8E8E"/>
+                </svg>
+
+              </i>
+              <span class="menu-title">Articles</span>
+            </a>
+          </li>
+          <li class="nav-dash"></li>
+          <li class="nav-item">
+            <a href="" class="nav-link">
+              <i class="menu-icon-custom">
+                <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.125 11.6875V7.625H6.46094C6.29518 7.625 6.13621 7.55915 6.019 7.44194C5.90179 7.32473 5.83594 7.16576 5.83594 7C5.83594 6.83424 5.90179 6.67527 6.019 6.55806C6.13621 6.44085 6.29518 6.375 6.46094 6.375H12.125V2.3125C12.1244 1.73253 11.8937 1.17649 11.4836 0.766389C11.0735 0.356288 10.5175 0.12562 9.9375 0.125H2.4375C1.85753 0.12562 1.30149 0.356288 0.891389 0.766389C0.481288 1.17649 0.25062 1.73253 0.25 2.3125V11.6875C0.25062 12.2675 0.481288 12.8235 0.891389 13.2336C1.30149 13.6437 1.85753 13.8744 2.4375 13.875H9.9375C10.5175 13.8744 11.0735 13.6437 11.4836 13.2336C11.8937 12.8235 12.1244 12.2675 12.125 11.6875ZM15.616 7.625L13.5582 9.6832C13.4459 9.80137 13.3843 9.95871 13.3864 10.1217C13.3885 10.2847 13.4541 10.4404 13.5694 10.5556C13.6846 10.6709 13.8403 10.7365 14.0033 10.7386C14.1663 10.7407 14.3236 10.6791 14.4418 10.5668L17.5668 7.4418C17.6839 7.3246 17.7497 7.16569 17.7497 7C17.7497 6.83431 17.6839 6.6754 17.5668 6.5582L14.4418 3.4332C14.3236 3.32094 14.1663 3.25928 14.0033 3.26137C13.8403 3.26345 13.6846 3.32912 13.5694 3.44437C13.4541 3.55962 13.3885 3.71534 13.3864 3.87831C13.3843 4.04129 13.4459 4.19863 13.5582 4.3168L15.616 6.375H12.125V7.625H15.616Z" fill="#777777"/>
+                </svg>
+
+              </i>
+              <span class="menu-title">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-12 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold text-primary">Your Account Information</h3>
+                  <h6 class="font-weight-normal mb-0 text-secondary">This is a summary of your account details that you submitted for registration. Your account details will not be visible to everyone</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title text-primary">Contact Information</p>
+                  <div class="form-group row d-flex align-items-center">
+                    <div class="col-sm-3 col-form-label">
+                      <p class="font-weight-bold">Full Name (Person ini charge)</p>
+                      <p class="text-secondary">Example: John Doe</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control custom-form-control" placeholder="John Doe" />
+                    </div>
+                  </div>
+                  <div class="form-group row d-flex align-items-center">
+                    <div class="col-sm-3 col-form-label">
+                      <p class="font-weight-bold">Registered Email</p>
+                      <p class="text-secondary">Example: john@email.com</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control custom-form-control" placeholder="john@email.com" />
+                    </div>
+                  </div>
+                  <div class="form-group row d-flex align-items-center">
+                    <div class="col-sm-3 col-form-label">
+                      <p class="font-weight-bold">Password</p>
+                      <p class="text-secondary">Change password. / Forgot password.</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="input-group input-group-custom">
+                        <input type="text" class="form-control custom-form-control" placeholder="**********" />
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <a href="" class="text-secondary"><i class="mdi mdi-eye"></i></a>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row d-flex align-items-center">
+                    <div class="col-sm-3 col-form-label">
+                      <p class="font-weight-bold">Company Name</p>
+                      <p class="text-secondary">Example: Top Franchise Asia</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control custom-form-control" placeholder="Top Franchise Asia" />
+                    </div>
+                  </div>
+                  <div class="form-group row d-flex align-items-center">
+                    <div class="col-sm-3 col-form-label">
+                      <p class="font-weight-bold">Company Address</p>
+                      <p class="text-secondary">Street address, building number, region, country and postal code. Example: 116, Changi Road, #03-09, Wis@Changi Singapore, 419718
+                      </p>
+                    </div>
+                    <div class="col-sm-9">
+                      <textarea name="" id="" class="form-control custom-form-control" cols="30" rows="8" placeholder="116, Changi Road, #03-09, Wis@Changi Singapore, 419718
+                      "></textarea>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary">Save Changes</button>
+                  <button class="btn btn-outline-danger-custom">Discard Changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+
